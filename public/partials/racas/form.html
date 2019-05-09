@@ -1,0 +1,32 @@
+<div class="col-md-6 mx-auto">
+  <h2>{{ vm.titulo }}</h2>
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Código:</label>
+        <input ng-model="vm.raca.codigo" type="text" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Descrição:</label>
+      <input ng-model="vm.raca.descricao" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label>Espécie:</label>
+      <select
+        class="form-control"
+        ng-model="vm.raca.especie"
+        ng-options="item as item.descricao for item in vm.especie track by item._id"
+      >
+      </select>
+    </div>
+    <div class="text-right">
+      <button ng-click="vm.save()" type="button" class="btn btn-primary">
+        Salvar
+      </button>
+      <button ui-sref="racaList" type="button" class="btn btn-danger">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
