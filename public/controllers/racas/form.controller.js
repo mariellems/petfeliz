@@ -10,7 +10,7 @@ RacaFormController.$inject = [
 function RacaFormController(RacaService, EspecieService, $stateParams, $state) {
   var vm = this;
   vm.raca = {};
-  vm.titulo = "Novo raca";
+  vm.titulo = "Nova raça";
 
   vm.animais = [];
 
@@ -19,7 +19,7 @@ function RacaFormController(RacaService, EspecieService, $stateParams, $state) {
   });
 
   if ($stateParams.id) {
-    vm.titulo = "Editando raca";
+    vm.titulo = "Editando raça";
     RacaService.findOne($stateParams.id).then(function(data) {
       vm.raca = data;
     });

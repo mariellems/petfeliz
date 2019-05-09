@@ -10,7 +10,7 @@ function ServicoFormController(ServicoService, $stateParams, $state) {
   vm.titulo = "Novo servico";
 
   if ($stateParams.id) {
-    vm.titulo = "Editando serviço";
+    vm.titulo = "Editando servico";
     ServicoService.findOne($stateParams.id).then(function(data) {
       vm.servico = data;
     });

@@ -1,5 +1,7 @@
 body {
-  font-size: .875rem;
+  font-size: 0.875rem;
+  background: lightgray;
+  background-size: cover;
 }
 
 .feather {
@@ -19,14 +21,14 @@ body {
   left: 0;
   z-index: 100; /* Behind the navbar */
   padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-sticky {
   position: relative;
   top: 0;
   height: calc(100vh - 48px);
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
@@ -35,12 +37,16 @@ body {
   .sidebar-sticky {
     position: -webkit-sticky;
     position: sticky;
+    background: #000000
+      url("https://previews.123rf.com/images/svetlanaprikhnenko/svetlanaprikhnenko1304/svetlanaprikhnenko130400007/18847705-seamless-background-with-footprint-of-cat-and-dog.jpg")
+      no-repeat fixed center;
+    background-size: cover;
   }
 }
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: black;
 }
 
 .sidebar .nav-link .feather {
@@ -49,7 +55,7 @@ body {
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: #999;
 }
 
 .sidebar .nav-link:hover .feather,
@@ -58,7 +64,7 @@ body {
 }
 
 .sidebar-heading {
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
 }
 
@@ -75,26 +81,42 @@ body {
  */
 
 .navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1, 5rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
+  background: #000000
+    url("https://previews.123rf.com/images/svetlanaprikhnenko/svetlanaprikhnenko1304/svetlanaprikhnenko130400007/18847705-seamless-background-with-footprint-of-cat-and-dog.jpg")
+    no-repeat fixed center;
+  background-size: cover;
+}
+
+.bg-dark {
+  background: #000000
+    url("https://previews.123rf.com/images/svetlanaprikhnenko/svetlanaprikhnenko1304/svetlanaprikhnenko130400007/18847705-seamless-background-with-footprint-of-cat-and-dog.jpg")
+    no-repeat fixed center;
+  background-size: cover;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: black;
+  font-size: 1.1rem;
 }
 
 .navbar .form-control {
-  padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
   border-width: 0;
   border-radius: 0;
 }
 
 .form-control-dark {
-  color: #fff;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
+  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .form-control-dark:focus {
   border-color: transparent;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }

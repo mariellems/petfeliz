@@ -17,7 +17,7 @@ function ProprietarioFormController(
 ) {
   var vm = this;
   vm.proprietario = {};
-  vm.titulo = "Novo proprietario";
+  vm.titulo = "Novo proprietário";
 
   vm.animais = [];
 
@@ -26,7 +26,7 @@ function ProprietarioFormController(
   });
 
   if ($stateParams.id) {
-    vm.titulo = "Editando proprietario";
+    vm.titulo = "Editando proprietário";
     ProprietarioService.findOne($stateParams.id).then(function(data) {
       vm.proprietario = data;
     });
