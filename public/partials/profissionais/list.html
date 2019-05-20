@@ -1,0 +1,40 @@
+<div
+  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3"
+>
+  <h1 class="h2">Profissionais</h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <a ui-sref="profissionalNovo" class="btn btn-sm btn-outline-success">
+      <span class="fas fa-plus-square"></span>
+      Novo profissional
+    </a>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Documento</th>
+        <th class="text-center">E-mail</th>
+        <th class="text-center">Telefone</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="profissional in vm.profissionais">
+        <td>{{ profissional.nome }}</td>
+        <td>{{ profissional.documento }}</td>
+        <td class="text-center">{{ profissional.email }}</td>
+        <td class="text-center">{{ profissional.telefone }}</td>
+        <td class="text-right">
+          <a ui-sref="profissionalEditar({id:profissional._id})"
+            ><span class="fas fa-edit"></span
+          ></a>
+          <a href="#" ng-click="vm.excluir(profissional._id)"
+            ><span class="fas fa-trash-alt"></span
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
